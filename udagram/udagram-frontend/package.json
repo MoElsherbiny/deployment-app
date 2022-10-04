@@ -6,8 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && cd www && zip -r Archive.zip .",
-    "deploy": "npm install -f && npm run build && aws s3 cp --recursive --acl public-read ./www s3://udagram-fromt/ ",
+    "build": "ng build --prod && cd www && zip -r Archive.zip .",
+    "deploy": "npm install -f && npm run build && aws s3 cp --recursive --acl public-read ./www $udagram-front ",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
