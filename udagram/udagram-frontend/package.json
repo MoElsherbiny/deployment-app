@@ -6,8 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && cd www && zip -r Archive.zip .",
-    "deploy": "npm install -f && npm run build && aws s3 cp --recursive --acl public-read ./www $AWS_BUCKET",
+    "build": "ng build",
+    "deploy": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
