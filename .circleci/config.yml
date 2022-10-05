@@ -33,8 +33,6 @@ jobs:
           name: Front-End Build
           command: npm run frontend:build
 
-    
-
       - run:
           name: API Build
           command: npm run api:build
